@@ -1,5 +1,6 @@
 package tests;
 
+import annotations.FrameworkAnnotation;
 import base.BaseTest;
 import dataproviders.FrameworkDataProvider;
 import org.testng.Assert;
@@ -10,7 +11,7 @@ import java.util.Map;
 
 public class ProductResultsPageTest extends BaseTest {
 
-
+    @FrameworkAnnotation(author = "Ashfaq",category = "Sanity")
     @Test(dataProvider = "getDataForProductImagesTest", dataProviderClass = FrameworkDataProvider.class)
     public void productImagesTest(String searchKey, String productName, int imageCount) {
         searchResultsPage = dashboardPage.doSearch(searchKey);
@@ -18,6 +19,7 @@ public class ProductResultsPageTest extends BaseTest {
         Assert.assertEquals(productInfoPage.getProductImagesCount(), imageCount);
     }
 
+    @FrameworkAnnotation(author = "Ashfaq",category = "Sanity")
     @Test
     public void productInfoTest() {
         searchResultsPage = dashboardPage.doSearch("MacBook");

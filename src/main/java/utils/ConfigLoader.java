@@ -14,8 +14,8 @@ public class ConfigLoader {
 
     private ConfigLoader() {
         String env = System.getProperty("env", EnvType.QA.name());
-        switch (EnvType.valueOf(env)){
-            case DEV :
+        switch (EnvType.valueOf(env)) {
+            case DEV:
                 properties = PropertyUtil.propertyLoader("src/test/resources/config/config-dev.properties");
                 break;
             case QA:
@@ -44,8 +44,8 @@ public class ConfigLoader {
     }
 
 
-    public String get(String key){
-        if(Objects.isNull(key) || Objects.isNull(properties.get(key.toLowerCase().trim()))){
+    public String get(String key) {
+        if (Objects.isNull(key) || Objects.isNull(properties.get(key.toLowerCase().trim()))) {
             throw new InvalidPropertyException("Please enter valid property");
         }
         return String.valueOf(properties.get(key.toLowerCase().trim()));
