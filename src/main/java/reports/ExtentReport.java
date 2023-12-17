@@ -24,7 +24,7 @@ public final class ExtentReport {
             extent.attachReporter(spark);
             spark.config().setTheme(Theme.STANDARD);
             spark.config().setDocumentTitle("Selenium Framework");
-            spark.config().setReportName("Regression");
+            spark.config().setReportName("Sanity");
         }
     }
 
