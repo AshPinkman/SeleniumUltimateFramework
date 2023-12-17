@@ -25,7 +25,7 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        //ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
+         ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
     }
 
     @Override

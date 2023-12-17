@@ -1,5 +1,8 @@
 package reports;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
+import factory.DriverFactory;
+
 public final class ExtentLogger {
 
     private ExtentLogger() {
@@ -10,9 +13,9 @@ public final class ExtentLogger {
         ExtentManager.getExtTest().pass(message);
     }
 
-//    public static void fail(String message) {
-//        ExtentManager.getExtTest().fail(message, MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
-//    }
+    public static void fail(String message) {
+        ExtentManager.getExtTest().fail(message, MediaEntityBuilder.createScreenCaptureFromBase64String(DriverFactory.getBase64Image()).build());
+    }
 
     public static void skip(String message) {
         ExtentManager.getExtTest().skip(message);
