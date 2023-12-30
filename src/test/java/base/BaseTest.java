@@ -20,6 +20,8 @@ public class BaseTest {
     protected DashboardPage dashboardPage;
     protected SearchResultsPage searchResultsPage;
     protected ProductInfoPage productInfoPage;
+    protected CartPage cartPage;
+    protected CheckoutPage checkoutPage;
 
 
     @BeforeMethod

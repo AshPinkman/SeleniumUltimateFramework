@@ -6,7 +6,7 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="C:/Users/Ashfaq Parvez/IdeaProjects/SeleniumUltimateFramework">
         <classes>
-            <class name="tests.ProductResultsPageTest"/>
+            <class name="tests.E2ETest"/>
         </classes>
     </test>
 </suite>

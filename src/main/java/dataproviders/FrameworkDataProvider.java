@@ -2,6 +2,7 @@ package dataproviders;
 
 
 import org.testng.annotations.DataProvider;
+import utils.ExcelUtils;
 
 public class FrameworkDataProvider {
 
@@ -13,6 +14,11 @@ public class FrameworkDataProvider {
                 {"iMac", "iMac", 3},
                 {"Samsung", "Samsung SyncMaster 941BW", 1}
         };
+    }
+
+    @DataProvider
+    public Object[][] getDataForPlaceOrderTest(){
+        return ExcelUtils.getData();
     }
 
 }
